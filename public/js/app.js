@@ -31,7 +31,7 @@ const initApp = () => {
     }
 
     const getWeatherData = async (address) => {
-        const url = 'http://localhost:3000/weather?address=' + address;
+        const url = '/weather?address=' + address;
         const weatherData = await getData(url);
 
         if (weatherData && weatherData.success) {

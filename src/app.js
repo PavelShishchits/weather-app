@@ -4,7 +4,7 @@ const hbs = require('hbs');
 const getGeoData = require('./utils/getGeoData');
 const getWeatherData = require('./utils/getWeatherData');
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 const rootFolder = join(__dirname, '../');
 const app = express();
 
