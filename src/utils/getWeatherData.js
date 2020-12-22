@@ -13,8 +13,7 @@ const getWeatherData = ({latitude, longitude}, callback) => {
             return;
         }
         const {current: currentWeather} = data;
-
-        const forecast = `${currentWeather.weather_descriptions && currentWeather.weather_descriptions[0]}, It is currently ${currentWeather.temperature} degrees out and it's feels like ${currentWeather.feelslike}.`
+        const forecast = `${currentWeather.weather_descriptions && currentWeather.weather_descriptions[0]}, It is currently ${currentWeather.temperature} degrees out and it's feels like ${currentWeather.feelslike}. Wind speed is ${currentWeather.wind_speed}`
         callback(null, forecast)
     })
 }
